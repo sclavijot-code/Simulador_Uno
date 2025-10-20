@@ -389,7 +389,7 @@ private:
     //metodo para barajar el descarte si la baraja principal queda vacía
     void reshuffle() {
         if (!mainStack.isEmpty()) return;
-        std::cout << "\n--- ¡El mazo se acabó! Barajando la pila de descarte... ---\n";
+        std::cout << "\n--- ¡El mazo se acabo! Barajando la pila de descarte... ---\n";
         card top = discardStack.pop(); //guardar la carta de arriba
         std::vector<card> toShuffle;
         while (!discardStack.isEmpty()) {
@@ -413,7 +413,7 @@ private:
     //metodo que revisa si un jugador ganó
     void checkWinner(const player& p) {
         if (p.hand.empty()) {
-            std::cout << "\n🎉 ¡" << p.name << " se ha quedado sin cartas y gana el juego! 🎉\n";
+            std::cout << "\n ¡" << p.name << " se ha quedado sin cartas y gana el juego! \n";
             gameOver = true;
         };
     };
@@ -442,15 +442,15 @@ int main() {
     int numPlayers;
     char x;
 
-    std::cout << "====================\n";
-    std::cout << "  SIMULADOR DE UNO  \n";
-    std::cout << "====================\n";
-    std::cout << "Ingrese el número de jugadores CPU (2-6): ";
+    std::cout << "========================================\n";
+    std::cout << "            SIMULADOR DE UNO            \n";
+    std::cout << "========================================\n";
+    std::cout << "Ingrese el numero de jugadores CPU (2-6): ";
     std::cin >> numPlayers;
     std::cout << "Desea jugar? (s/n) ";
     std::cin >> x;
     if (numPlayers < 2 || numPlayers > 6) {
-        std::cout << "Número de jugadores no válido.\n";
+        std::cout << "Numero de jugadores no valido.\n";
         return 1;
     };
 
